@@ -7,22 +7,18 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("stylesheets/application.scss")
 
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 
 Vue.use(TurbolinksAdapter)
+Vue.component('app', App)
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
-    el: '[data-behavior="vue"]',
-    data: () => {
-      return {
-        message: "Can you say hello?"
-      }
-    },
-    components: { App }
+    el: '[data-behavior="vue"]'
   })
 })
 
