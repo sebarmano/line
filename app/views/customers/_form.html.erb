@@ -1,0 +1,9 @@
+<%= form_with model: customer do |f| %>
+  Nombre: <%= f.text_field :first_name %>
+  Apellido: <%= f.text_field :last_name %>
+  Direccion: <%= f.text_field :address %>
+  Telefono: <%= f.text_field :phone %>
+  Email: <%= f.text_field :email %>
+
+  <%= f.submit class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"%>
+<% end %>
