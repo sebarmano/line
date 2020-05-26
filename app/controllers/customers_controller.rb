@@ -11,6 +11,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
 
     if @customer.save
+      session[:current_customer_id] = @customer.id
       redirect_to customers_path, notice: "Se ha creado el cliente"
     else
       render :new

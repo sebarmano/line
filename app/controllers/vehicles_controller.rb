@@ -4,6 +4,6 @@ class VehiclesController < ApplicationController
   end
 
   def new
-    @vehicle = Vehicle.new(params[:customer_id])
+    @vehicle = current_customer.vehicles.build
   end
 end
