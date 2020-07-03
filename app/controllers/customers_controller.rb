@@ -3,6 +3,10 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
+  def show
+    @customer = set_customer
+  end
+
   def new
     @customer = Customer.new
   end
