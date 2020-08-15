@@ -20,7 +20,6 @@ class CustomersController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
@@ -44,8 +43,10 @@ class CustomersController < ApplicationController
       :first_name,
       :last_name,
       :address,
-      :phone,
+      :city,
       :email,
+      :phone,
+      :zip,
     )
   end
 
