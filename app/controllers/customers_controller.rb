@@ -5,6 +5,7 @@ class CustomersController < ApplicationController
 
   def show
     @customer = set_customer
+    @vehicle = Vehicle.new
   end
 
   def new
